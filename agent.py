@@ -31,6 +31,12 @@ try:
 except ImportError:
     NAV_MEMORY_AVAILABLE = False
 
+try:
+    from location_validator import validate_llm_response
+    LOCATION_VALIDATOR_AVAILABLE = True
+except ImportError:
+    LOCATION_VALIDATOR_AVAILABLE = False
+
 # How long to wait between loop iterations (seconds)
 # Long enough for most animations/dialogue to finish
 LOOP_DELAY    = 2.0
@@ -416,6 +422,15 @@ class PokeAgent:
 
         # Parse and execute actions
         if has_actions(response):
+            # Validate locations before executing
+            if LOCATION_VALIDATOR_AVAILABLE:
+                is_valid, fakes = validate_llm_response(response)
+                if not is_valid:
+                    fake_list = ", ".join(fakes)
+                    self.log(f"⚠️ HALLUCINATION DETECTED: {fake_list}")
+                    self.log(f"❌ Rejecting action — LLM invented fake locations")
+                    self.idle_count += 1
+                    return LOOP_DELAY * 2
             clean, action_log = parse_and_execute(response, execute=True)
             log_line = clean.strip().split("\n")[0][:80] if clean.strip() else ""
             actions_str = " → ".join(action_log)
