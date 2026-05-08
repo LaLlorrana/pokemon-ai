@@ -1,0 +1,20 @@
+{
+  "_instructions": "Grid coordinates [x, y] for each town on the Borrius region Fly map. x = steps RIGHT from left edge, y = steps DOWN from top edge. Fill these in by opening Fly, moving cursor to each town and counting presses from the top-left corner.",
+
+  "Dehara City":     null,
+  "Bellin Town":     null,
+  "Dresco Town":     null,
+  "Blizzard City":   null,
+  "Tehl Town":       null,
+  "Fallshore City":  null,
+  "Epidimy Town":    null,
+  "Tarmigan Town":   null,
+  "Antisis City":    null,
+  "Seaport City":    null,
+  "Gurun Town":      null,
+  "Vivill Town":     null,
+  "Crater Town":     null,
+  "Polder Town":     null,
+  "Magnolia Town":   null,
+  "Redwood Village": null
+}

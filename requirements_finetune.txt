@@ -1,0 +1,35 @@
+# ============================================================
+#  requirements_finetune.txt — Fine-tuning dependencies
+#
+#  These are SEPARATE from the bot's runtime requirements.
+#  Only needed when you actually run finetune.py.
+#
+#  Install with:
+#    pip install -r requirements_finetune.txt
+#
+#  NOTE: Install PyTorch FIRST manually (pick your CUDA version):
+#    pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+#    (RTX 4080 Super uses CUDA 12.x — cu121 or cu124 both work)
+# ============================================================
+
+# Core fine-tuning stack
+unsloth[colab-new] >= 2024.9.0   # QLoRA + vision support
+transformers >= 4.45.0
+trl >= 0.12.0                     # SFTTrainer
+datasets >= 3.0.0
+peft >= 0.13.0
+accelerate >= 0.34.0
+
+# Quantization
+bitsandbytes >= 0.44.0
+
+# Vision model support
+Pillow >= 10.0.0
+qwen-vl-utils >= 0.0.8            # Qwen2-VL utilities
+
+# GGUF export (for Ollama)
+llama-cpp-python >= 0.3.0         # optional, needed for manual GGUF conversion
+
+# Utilities
+huggingface-hub >= 0.25.0
+sentencepiece >= 0.2.0

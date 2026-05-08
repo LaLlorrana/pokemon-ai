@@ -1,0 +1,61 @@
+{
+  "location": "Map 0-0 (unknown \u2014 type 'set location: NAME' to name it)",
+  "map_bank": 0,
+  "map_number": 0,
+  "player_x": 8,
+  "player_y": 10,
+  "badges": [],
+  "team": [
+    {
+      "name": "Lucario",
+      "species": "Oshawott",
+      "level": 84,
+      "hp": 238,
+      "max_hp": 238,
+      "status": "Healthy",
+      "is_egg": false
+    },
+    {
+      "name": "Incineroar",
+      "species": "Pok\u00e9mon #944",
+      "level": 100,
+      "hp": 228,
+      "max_hp": 303,
+      "status": "Healthy",
+      "is_egg": false
+    },
+    {
+      "name": "Larvesta",
+      "species": "Pok\u00e9mon #689",
+      "level": 58,
+      "hp": 138,
+      "max_hp": 138,
+      "status": "Healthy",
+      "is_egg": false
+    },
+    {
+      "name": "Metagross",
+      "species": "Pok\u00e9mon #400",
+      "level": 82,
+      "hp": 249,
+      "max_hp": 249,
+      "status": "Healthy",
+      "is_egg": false
+    }
+  ],
+  "active_goal": "Attempt trying to get to dehara city",
+  "notes": [],
+  "in_battle": false,
+  "is_trainer": false,
+  "is_double": false,
+  "hms_obtained": [
+    "Fly",
+    "Surf",
+    "Cut",
+    "Strength",
+    "Dive",
+    "Rock Smash",
+    "Waterfall",
+    "Rock Climb"
+  ]
+}
